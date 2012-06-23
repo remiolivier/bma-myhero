@@ -20,5 +20,14 @@ namespace MyHero
         {
             InitializeComponent();
         }
+
+        private void HubTile_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            HubTile hub = sender as HubTile;
+            if (hub.Title == "events")
+                NavigationService.Navigate(new Uri("/Views/EventsListPage.xaml", UriKind.Relative));
+            else if (hub.Title == "photo")
+                NavigationService.Navigate(new Uri("/Views/ImageEventsListPage.xaml", UriKind.Relative));
+        }
     }
 }

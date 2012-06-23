@@ -6,6 +6,8 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -15,22 +17,68 @@
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+        <controls:Panorama Title="MY HERO">
+            <controls:Panorama.TitleTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}" FontSize="100" Margin="0,50,0,0" />
+                </DataTemplate>
+            </controls:Panorama.TitleTemplate>
+            <controls:PanoramaItem Header="">
+                <StackPanel>
+                    <toolkit:WrapPanel Height="573">
+                        <toolkit:HubTile Grid.Row="1" Grid.Column="0" 
+                                             Margin="12,12,0,0"
+                                             Source="/Images/categ1.jpg"
+                                             Title="events"
+                                             DisplayNotification="False"
+                                             GroupTag="Categ"
+                                             Tap="HubTile_Tap"
+                                             />
+                        <toolkit:HubTile Grid.Row="1" Grid.Column="0" 
+                                             Margin="12,12,0,0"
+                                             Source="/Images/categ1.jpg"
+                                             Title="social"
+                                             DisplayNotification="False"
+                                             GroupTag="Categ"
+                                             Tap="HubTile_Tap"
+                                             />
+                        <toolkit:HubTile Grid.Row="1" Grid.Column="0" 
+                                             Margin="12,12,0,0"
+                                             Source="/Images/categ1.jpg"
+                                             Title="photo"
+                                             DisplayNotification="False"
+                                             GroupTag="Categ"
+                                             Tap="HubTile_Tap"
+                                             />
+                        <toolkit:HubTile Grid.Row="1" Grid.Column="0" 
+                                             Margin="12,12,0,0"
+                                             Source="/Images/categ1.jpg"
+                                             Title="animaux"
+                                             DisplayNotification="False"
+                                             GroupTag="Categ"
+                                             Tap="HubTile_Tap"
+                                             />
+                    </toolkit:WrapPanel>
+                    <HyperlinkButton Content="paramètres" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+                </StackPanel>
+            </controls:PanoramaItem>
 
-        <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="page name" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
-        </StackPanel>
-
-        <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            
-            
-        </Grid>
+            <controls:PanoramaItem Header="top postiers">
+                <ListBox x:Name="FeatListBox" Margin="0,0,-12,0" ItemsSource="{Binding Items}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,17">
+                                <Image Source="{Binding Icon}" Width="40" Height="40"></Image>
+                                <StackPanel Width="311">
+                                    <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                                    <TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </controls:PanoramaItem>
+        </controls:Panorama>
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->

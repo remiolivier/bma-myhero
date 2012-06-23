@@ -1,0 +1,20 @@
+﻿<xapCache source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Bin\Debug\MyHero.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="6/23/2012 9:07:08 AM">
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="6/23/2012 4:24:54 AM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Background.png" archivePath="Background.png" lastWriteTime="6/23/2012 2:05:42 AM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="6/23/2012 2:05:42 AM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\obj\Debug\MyHero.dll" archivePath="MyHero.dll" lastWriteTime="6/23/2012 9:07:08 AM" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="9/15/2011 4:36:26 PM" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.Maps.dll" archivePath="Microsoft.Phone.Controls.Maps.dll" lastWriteTime="9/15/2011 4:36:26 PM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\packages\SilverlightToolkitWP.4.2011.12.14\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="6/23/2012 4:48:53 AM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero.Helpers\Bin\Debug\MyHero.Helpers.dll" archivePath="MyHero.Helpers.dll" lastWriteTime="6/23/2012 8:48:31 AM" />
+  <file source="C:\Program Files (x86)\NOKIA\Nokia.Maps\Nokia.Maps.dll" archivePath="Nokia.Maps.dll" lastWriteTime="6/6/2012 4:46:56 PM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero.Helpers\Bin\Debug\Newtonsoft.Json.dll" archivePath="Newtonsoft.Json.dll" lastWriteTime="6/23/2012 7:48:12 AM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\01.png" archivePath="Images\01.png" lastWriteTime="6/23/2012 4:52:03 AM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\categ1.jpg" archivePath="Images\categ1.jpg" lastWriteTime="6/23/2012 4:54:39 AM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="6/23/2012 2:05:42 AM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Toolkit.Content\ApplicationBar.Cancel.png" archivePath="Toolkit.Content\ApplicationBar.Cancel.png" lastWriteTime="6/23/2012 4:48:53 AM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="6/23/2012 4:48:53 AM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Toolkit.Content\ApplicationBar.Delete.png" archivePath="Toolkit.Content\ApplicationBar.Delete.png" lastWriteTime="6/23/2012 4:48:53 AM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Toolkit.Content\ApplicationBar.Select.png" archivePath="Toolkit.Content\ApplicationBar.Select.png" lastWriteTime="6/23/2012 4:48:53 AM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="6/23/2012 8:38:16 AM" />
+</xapCache>

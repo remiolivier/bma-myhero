@@ -1,0 +1,63 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="MyHero.Views.EventsListPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <phone:PhoneApplicationPage.Resources>
+        <DataTemplate x:Key="EventItemTemplate">
+            <Grid Width="440">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="340" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                
+                <StackPanel Grid.Row="0" Grid.Column="0">
+                    <TextBlock Text="{Binding text}" />
+                    <TextBlock Text="{Binding date}" />
+                </StackPanel>
+                <TextBlock Text="{Binding nb_plus}"  Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" />
+                <Image Source="{Binding url_photo}" Width="70" Height="70"  Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" />
+            </Grid>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <!--Pivot Control-->
+        <controls:Pivot Title="MY HERO">
+            <!--Pivot item one-->
+            <controls:PivotItem Header="par date">
+                <ListBox ItemsSource="{Binding ItemsByDate}" ItemTemplate="{StaticResource EventItemTemplate}" SelectionChanged="ListBox_SelectionChanged" />
+            </controls:PivotItem>
+
+            <!--Pivot item two-->
+            <controls:PivotItem Header="par popularite">
+                <ListBox ItemsSource="{Binding ItemsByPopularity}" ItemTemplate="{StaticResource EventItemTemplate}" SelectionChanged="ListBox_SelectionChanged" />
+            </controls:PivotItem>
+        </controls:Pivot>
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton x:Name="appbar_MapButton" IconUri="/Images/appbar_button1.png" Text="carte" Click="appbar_MapButton_Click" />
+            <shell:ApplicationBarIconButton x:Name="appbar_RefreshButton" IconUri="/Images/appbar_button2.png" Text="rafraîchir" Click="appbar_RefreshButton_Click" />
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+    
+</phone:PhoneApplicationPage>
