@@ -19,6 +19,7 @@ namespace MyHero.Views
 {
     public partial class EventsListPage : PhoneApplicationPage
     {
+        private ProgressIndicator _progressIndicator;
         protected EventsListViewModel model { get; set; }
 
         public EventsListPage()
@@ -31,12 +32,24 @@ namespace MyHero.Views
         {
             base.OnNavigatedTo(e);
 
+            _progressIndicator = new ProgressIndicator();
+            _progressIndicator.IsVisible = true;
+            SystemTray.ProgressIndicator = _progressIndicator;
+
             model.Load();
+
+            _progressIndicator.IsVisible = false;
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var selectedevent = e.AddedItems[0] as Event;
+
+            ListBox listbox = sender as ListBox;
+            listbox.SelectionChanged -= ListBox_SelectionChanged;
+            listbox.SelectedItem = null;
+            listbox.SelectionChanged += ListBox_SelectionChanged;
+
             NavigationService.Navigate(new Uri("/Views/EventDetailsPage.xaml?eventid=65455757", UriKind.Relative));
         }
 
@@ -51,7 +64,12 @@ namespace MyHero.Views
 
         private void appbar_RefreshButton_Click(object sender, EventArgs e)
         {
+            _progressIndicator.IsVisible = true;
+            
+            model.Clear();
             model.Load();
+
+            _progressIndicator.IsVisible = false;
         }
     }
 }

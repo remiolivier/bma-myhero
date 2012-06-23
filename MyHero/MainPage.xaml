@@ -63,19 +63,18 @@
                 </StackPanel>
             </controls:PanoramaItem>
 
-            <controls:PanoramaItem Header="top postiers">
-                <ListBox x:Name="FeatListBox" Margin="0,0,-12,0" ItemsSource="{Binding Items}">
+            <controls:PanoramaItem Header="top postiers" Orientation="Horizontal" Width="460">
+                <ListBox x:Name="FeatListBox" Margin="0,0,-12,0" ItemsSource="{Binding Mailmans}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal" Margin="0,0,0,17">
-                                <Image Source="{Binding Icon}" Width="40" Height="40"></Image>
-                                <StackPanel Width="311">
-                                    <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
-                                    <TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                </StackPanel>
-                            </StackPanel>
+                            <Image Source="{Binding url_photo}" CacheMode="BitmapCache" Width="150" Height="150"></Image>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <toolkit:WrapPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
                 </ListBox>
             </controls:PanoramaItem>
         </controls:Panorama>
