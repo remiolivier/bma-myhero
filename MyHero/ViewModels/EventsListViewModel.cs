@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using MyHero.Helpers;
 using MyHero.Models;
+using MyHero.Services;
 
 namespace MyHero.ViewModels
 {
@@ -28,7 +29,7 @@ namespace MyHero.ViewModels
 
         public void Load()
         {
-            JsonHelper<EventContainer>.QueryCompleted += new QueryCompletedDelegate<EventContainer>((x) =>
+            EventService.GetEventsByDate((x) =>
             {
                 foreach(var evt in x.events)
                 {

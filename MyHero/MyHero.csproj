@@ -73,6 +73,7 @@
     </Compile>
     <Compile Include="Models\Event.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\EventService.cs" />
     <Compile Include="ViewModels\EventsListViewModel.cs" />
     <Compile Include="Views\EventDetailsPage.xaml.cs">
       <DependentUpon>EventDetailsPage.xaml</DependentUpon>
@@ -141,7 +142,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
