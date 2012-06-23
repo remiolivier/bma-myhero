@@ -15,14 +15,14 @@ namespace MyHero.Services
 {
     public class EventService
     {
-        public static void GetEventsByDate(Action<EventContainer> action)
+        public static void GetEventsByDate(UserAddress position, Action<EventContainer> action)
         {
-            FromUri("http://bactisme.frandroid.com/bemyapp/?action=get_event_list", action);
+            FromUri(string.Format("{0}?action=get_event_list&lat={1}&lng={2}", App.BASE_URL, position.Latitude, position.Longitude), action);
         }
 
-        public static void GetEventsByPopularity(Action<EventContainer> action)
+        public static void GetEventsByPopularity(UserAddress position, Action<EventContainer> action)
         {
-            FromUri("http://bactisme.frandroid.com/bemyapp/?action=get_event_list", action);
+            FromUri(string.Format("{0}?action=get_event_list&lat={1}&lng={2}&sort=nb_plus&order=-1", App.BASE_URL, position.Latitude, position.Longitude), action);
         }
 
         private static void FromUri<T>(string uri, Action<T> action)

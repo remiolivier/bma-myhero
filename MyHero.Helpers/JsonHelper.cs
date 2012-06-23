@@ -19,14 +19,14 @@ namespace MyHero.Helpers
 
         public static void GetFromUri(string uri)
         {
-            BackgroundWorker bg = new BackgroundWorker();
-            bg.DoWork += new DoWorkEventHandler((x, y) =>
-                {
+            //BackgroundWorker bg = new BackgroundWorker();
+            //bg.DoWork += new DoWorkEventHandler((x, y) =>
+            //    {
                     WebClient webClient = new WebClient();
                     webClient.DownloadStringCompleted += new DownloadStringCompletedEventHandler(webClient_DownloadStringCompleted);
                     webClient.DownloadStringAsync(new Uri(uri));
-                });
-            bg.RunWorkerAsync();
+            //    });
+            //bg.RunWorkerAsync();
         }
 
         static void webClient_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)

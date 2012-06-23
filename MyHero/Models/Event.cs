@@ -15,7 +15,7 @@ namespace MyHero.Models
 {
     public class Event
     {
-        public Id _id { get; set; }
+        public string _id { get; set; }
         public string mailman_id { get; set; }
         public string category { get; set; }
         public string text { get; set; }
@@ -35,6 +35,13 @@ namespace MyHero.Models
     {
         public int sec { get; set; }
         public int usec { get; set; }
+
+        public override string ToString()
+        {
+            System.DateTime dtDateTime = new DateTime(1970,1,1,0,0,0,0);
+            dtDateTime = dtDateTime.AddSeconds(sec).ToLocalTime();
+            return dtDateTime.ToString();
+        }
     }
 
 

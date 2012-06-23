@@ -18,6 +18,7 @@ namespace MyHero.Views
 {
     public partial class ImageEventsListPage : PhoneApplicationPage
     {
+        private ProgressIndicator _progressIndicator;
         protected EventsListViewModel model { get; set; }
 
         public ImageEventsListPage()
@@ -30,7 +31,13 @@ namespace MyHero.Views
         {
             base.OnNavigatedTo(e);
 
+            _progressIndicator = new ProgressIndicator();
+            _progressIndicator.IsVisible = true;
+            SystemTray.ProgressIndicator = _progressIndicator;  
+
             model.Load();
+
+            _progressIndicator.IsVisible = false;
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -50,12 +57,11 @@ namespace MyHero.Views
 
         private void appbar_RefreshButton_Click(object sender, EventArgs e)
         {
+            _progressIndicator.IsVisible = true;
+            
             model.Load();
-        }
 
-        private void ListBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
-
+            _progressIndicator.IsVisible = false;
         }
     }
 }

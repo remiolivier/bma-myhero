@@ -12,11 +12,17 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using MyHero.Models;
 
 namespace MyHero
 {
     public partial class App : Application
     {
+        public const string BASE_URL = "http://bactisme.frandroid.com/bemyapp/";
+
+        public List<UserAddress> Addresses = new List<UserAddress>();
+        public static UserAddress CurrentAddress;
+
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
         /// </summary>
@@ -63,6 +69,8 @@ namespace MyHero
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+            if (CurrentAddress == null)
+                CurrentAddress = new UserAddress() { Latitude = 48.8607, Longitude = 2.3504 };
         }
 
         // Code to execute when the application is activated (brought to foreground)

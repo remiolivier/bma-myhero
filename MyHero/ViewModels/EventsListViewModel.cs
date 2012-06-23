@@ -29,16 +29,31 @@ namespace MyHero.ViewModels
 
         public void Load()
         {
-            EventService.GetEventsByDate((x) =>
+            EventService.GetEventsByDate(App.CurrentAddress, x =>
             {
+                ItemsByDate.Clear();
                 foreach(var evt in x.events)
                 {
-                    Deployment.Current.Dispatcher.BeginInvoke(() =>
-                    {
-                        ItemsByDate.Add(evt);
-                    });
+                    evt.url_photo = string.Format("{0}{1}", App.BASE_URL, evt.url_photo);
+                    ItemsByDate.Add(evt);
                 }
             });
+
+            EventService.GetEventsByPopularity(App.CurrentAddress, (x) =>
+            {
+                ItemsByPopularity.Clear();
+                foreach (var evt in x.events)
+                {
+                    evt.url_photo = string.Format("{0}{1}", App.BASE_URL, evt.url_photo);
+                    ItemsByPopularity.Add(evt);
+                }
+            });
+        }
+
+        public void Clear()
+        {
+            ItemsByDate.Clear();
+            ItemsByPopularity.Clear();
         }
     }
 }
