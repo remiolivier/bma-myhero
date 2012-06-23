@@ -13,16 +13,16 @@ using MyHero.Models;
 
 namespace MyHero.Services
 {
-    public class EventService
+    public class EventService : BaseService<EventContainer>
     {
         public static void GetEventsByDate(Action<EventContainer> action)
         {
-            JsonHelper<EventContainer>.QueryCompleted += new QueryCompletedDelegate<EventContainer>((x) =>
-            {
-                action.Invoke(x);
-            });
+            FromUri("http://bactisme.frandroid.com/bemyapp/?action=get_event_list", action);
+        }
 
-            JsonHelper<EventContainer>.GetFromUri("http://bactisme.frandroid.com/bemyapp/?action=get_event_list");
+        public static void GetEventsByPopularity(Action<EventContainer> action)
+        {
+            FromUri("http://bactisme.frandroid.com/bemyapp/?action=get_event_list", action);
         }
     }
 }

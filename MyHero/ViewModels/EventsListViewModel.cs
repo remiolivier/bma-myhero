@@ -39,31 +39,6 @@ namespace MyHero.ViewModels
                     });
                 }
             });
-
-            JsonHelper<EventContainer>.GetFromUri("http://bactisme.frandroid.com/bemyapp/?action=get_event_list");
-
-            //ItemsByDate.Add(new Event() { Description = "Une description", Date = DateTime.Now.ToShortTimeString(), Popularity = "34", Image = "/Images/01.png" });
-            //ItemsByDate.Add(new Event() { Description = "Une description", Date = DateTime.Now.ToShortTimeString(), Popularity = "4", Image = "/Images/01.png" });
-            //ItemsByDate.Add(new Event() { Description = "Une description", Date = DateTime.Now.ToShortTimeString(), Popularity = "3", Image = "/Images/01.png" });
-            //ItemsByDate.Add(new Event() { Description = "Une description", Date = DateTime.Now.ToShortTimeString(), Popularity = "34", Image = "/Images/01.png" });
-            //ItemsByDate.Add(new Event() { Description = "Une description", Date = DateTime.Now.ToShortTimeString(), Popularity = "34", Image = "/Images/01.png" });
-            //ItemsByDate.Add(new Event() { Description = "Une description", Date = DateTime.Now.ToShortTimeString(), Popularity = "21", Image = "/Images/01.png" });
-            //ItemsByDate.Add(new Event() { Description = "Une description", Date = DateTime.Now.ToShortTimeString(), Popularity = "34", Image = "/Images/01.png" });
-            //ItemsByDate.Add(new Event() { Description = "Une description", Date = DateTime.Now.ToShortTimeString(), Popularity = "63", Image = "/Images/01.png" });
-            //ItemsByDate.Add(new Event() { Description = "Une description", Date = DateTime.Now.ToShortTimeString(), Popularity = "34", Image = "/Images/01.png" });
-            //ItemsByDate.Add(new Event() { Description = "Une description", Date = DateTime.Now.ToShortTimeString(), Popularity = "10", Image = "/Images/01.png" });
-
-
-            //ItemsByPopularity.Add(new Event() { Description = "Une description", Date = DateTime.Now.ToShortTimeString(), Popularity = "63", Image = "/Images/01.png" });
-            //ItemsByPopularity.Add(new Event() { Description = "Une description", Date = DateTime.Now.ToShortTimeString(), Popularity = "34", Image = "/Images/01.png" });
-            //ItemsByPopularity.Add(new Event() { Description = "Une description", Date = DateTime.Now.ToShortTimeString(), Popularity = "34", Image = "/Images/01.png" });
-            //ItemsByPopularity.Add(new Event() { Description = "Une description", Date = DateTime.Now.ToShortTimeString(), Popularity = "34", Image = "/Images/01.png" });
-            //ItemsByPopularity.Add(new Event() { Description = "Une description", Date = DateTime.Now.ToShortTimeString(), Popularity = "34", Image = "/Images/01.png" });;
-            //ItemsByPopularity.Add(new Event() { Description = "Une description", Date = DateTime.Now.ToShortTimeString(), Popularity = "34", Image = "/Images/01.png" });
-            //ItemsByPopularity.Add(new Event() { Description = "Une description", Date = DateTime.Now.ToShortTimeString(), Popularity = "21", Image = "/Images/01.png" });
-            //ItemsByPopularity.Add(new Event() { Description = "Une description", Date = DateTime.Now.ToShortTimeString(), Popularity = "10", Image = "/Images/01.png" });
-            //ItemsByPopularity.Add(new Event() { Description = "Une description", Date = DateTime.Now.ToShortTimeString(), Popularity = "4", Image = "/Images/01.png" });
-            //ItemsByPopularity.Add(new Event() { Description = "Une description", Date = DateTime.Now.ToShortTimeString(), Popularity = "3", Image = "/Images/01.png" });
         }
     }
 }
