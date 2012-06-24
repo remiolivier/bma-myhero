@@ -1,0 +1,124 @@
+﻿<MyHero_Models:EventContainer xmlns:MyHero_Models="clr-namespace:MyHero.Models" xmlns:System="clr-namespace:System;assembly=mscorlib">
+	<MyHero_Models:EventContainer.events>
+		<MyHero_Models:Event _id="Nam aenean" address="Vestibulum maecenas aliquam" category="Cras praesent duis adipiscing integer" mailman_id="Curabitur mauris phasellus nullam" nb_plus="54" text="Class quisque parturient consequat" url_photo="http://bactisme.frandroid.com/bemyapp/media/photos/me.png">
+			<MyHero_Models:Event.date>
+				<MyHero_Models:Date sec="97" usec="83"/>
+			</MyHero_Models:Event.date>
+			<MyHero_Models:Event.loc>
+				<System:Double>114.5</System:Double>
+				<System:Double>464.56</System:Double>
+				<System:Double>907.29</System:Double>
+				<System:Double>667.01</System:Double>
+				<System:Double>556.41</System:Double>
+			</MyHero_Models:Event.loc>
+		</MyHero_Models:Event>
+		<MyHero_Models:Event _id="Donec etiam vivamus sed" address="Fusce nunc" category="Amet aptent ante arcu aliquam" mailman_id="Vestibulum lorem diam accumsan" nb_plus="54" text="Dis est aliquet morbi vestibulum" url_photo="http://bactisme.frandroid.com/bemyapp/media/photos/me.png">
+			<MyHero_Models:Event.date>
+				<MyHero_Models:Date sec="28" usec="64"/>
+			</MyHero_Models:Event.date>
+			<MyHero_Models:Event.loc>
+				<System:Double>322.85</System:Double>
+				<System:Double>664.84</System:Double>
+				<System:Double>304.15</System:Double>
+				<System:Double>897.1</System:Double>
+				<System:Double>633.37</System:Double>
+			</MyHero_Models:Event.loc>
+		</MyHero_Models:Event>
+		<MyHero_Models:Event _id="Auctor hac blandit elementum leo" address="Dictumst commodo mus" category="Adipiscing congue parturient" mailman_id="Nec eleifend facilisis fermentum" nb_plus="67" text="Nulla proin non elit per" url_photo="http://bactisme.frandroid.com/bemyapp/media/photos/me.png">
+			<MyHero_Models:Event.date>
+				<MyHero_Models:Date sec="75" usec="30"/>
+			</MyHero_Models:Event.date>
+			<MyHero_Models:Event.loc>
+				<System:Double>819.42</System:Double>
+				<System:Double>467.25</System:Double>
+				<System:Double>830.69</System:Double>
+				<System:Double>453.38</System:Double>
+				<System:Double>349.65</System:Double>
+			</MyHero_Models:Event.loc>
+		</MyHero_Models:Event>
+		<MyHero_Models:Event _id="Faucibus erat cubilia" address="Augue cursus dolor dapibus egestas" category="Dictum eros sem" mailman_id="Habitant lectus nibh" nb_plus="86" text="Inceptos interdum nisi lobortis" url_photo="http://bactisme.frandroid.com/bemyapp/media/photos/me.png">
+			<MyHero_Models:Event.date>
+				<MyHero_Models:Date sec="86" usec="39"/>
+			</MyHero_Models:Event.date>
+			<MyHero_Models:Event.loc>
+				<System:Double>616.95</System:Double>
+				<System:Double>912.74</System:Double>
+				<System:Double>797.71</System:Double>
+				<System:Double>326.86</System:Double>
+				<System:Double>776.99</System:Double>
+			</MyHero_Models:Event.loc>
+		</MyHero_Models:Event>
+		<MyHero_Models:Event _id="Nisl vestibulum nunc" address="Odio orci" category="Sit vestibulum" mailman_id="Vel nascetur nam" nb_plus="88" text="Libero pede" url_photo="http://bactisme.frandroid.com/bemyapp/media/photos/me.png">
+			<MyHero_Models:Event.date>
+				<MyHero_Models:Date sec="49" usec="41"/>
+			</MyHero_Models:Event.date>
+			<MyHero_Models:Event.loc>
+				<System:Double>344.82</System:Double>
+				<System:Double>378.95</System:Double>
+				<System:Double>598.37</System:Double>
+				<System:Double>164.87</System:Double>
+				<System:Double>336.61</System:Double>
+			</MyHero_Models:Event.loc>
+		</MyHero_Models:Event>
+		<MyHero_Models:Event _id="Felis litora sed pharetra" address="Luctus dis magnis mattis quis" category="Placerat habitasse pulvinar" mailman_id="Adipiscing parturient" nb_plus="58" text="Mauris ipsum feugiat justo" url_photo="http://bactisme.frandroid.com/bemyapp/media/photos/me.png">
+			<MyHero_Models:Event.date>
+				<MyHero_Models:Date sec="39" usec="15"/>
+			</MyHero_Models:Event.date>
+			<MyHero_Models:Event.loc>
+				<System:Double>301.79</System:Double>
+				<System:Double>310.86</System:Double>
+				<System:Double>461.22</System:Double>
+				<System:Double>304.13</System:Double>
+				<System:Double>268.19</System:Double>
+			</MyHero_Models:Event.loc>
+		</MyHero_Models:Event>
+		<MyHero_Models:Event _id="Mollis himenaeos" address="Vestibulum lorem urna montes" category="Nostra ornare vestibulum" mailman_id="Platea imperdiet adipiscing cras duis" nb_plus="10" text="Malesuada magna" url_photo="http://bactisme.frandroid.com/bemyapp/media/photos/me.png">
+			<MyHero_Models:Event.date>
+				<MyHero_Models:Date sec="27" usec="98"/>
+			</MyHero_Models:Event.date>
+			<MyHero_Models:Event.loc>
+				<System:Double>620.34</System:Double>
+				<System:Double>972.17</System:Double>
+				<System:Double>330.5</System:Double>
+				<System:Double>302.93</System:Double>
+				<System:Double>688.49</System:Double>
+			</MyHero_Models:Event.loc>
+		</MyHero_Models:Event>
+		<MyHero_Models:Event _id="Parturient penatibus senectus gravida sapien" address="Semper est hac" category="Iaculis metus" mailman_id="Lacinia leo vestibulum sociosqu" nb_plus="43" text="Porttitor laoreet natoque suscipit posuere" url_photo="http://www.cohovineyard.com/">
+			<MyHero_Models:Event.date>
+				<MyHero_Models:Date sec="83" usec="29"/>
+			</MyHero_Models:Event.date>
+			<MyHero_Models:Event.loc>
+				<System:Double>178.37</System:Double>
+				<System:Double>119.28</System:Double>
+				<System:Double>598.87</System:Double>
+				<System:Double>356.24</System:Double>
+				<System:Double>924.55</System:Double>
+			</MyHero_Models:Event.loc>
+		</MyHero_Models:Event>
+		<MyHero_Models:Event _id="Adipiscing sociis tincidunt parturient" address="Vestibulum potenti tristique mus" category="Nunc ultrices" mailman_id="Nec non vestibulum adipiscing vehicula" nb_plus="56" text="Per taciti parturient" url_photo="http://bactisme.frandroid.com/bemyapp/media/photos/me.png">
+			<MyHero_Models:Event.date>
+				<MyHero_Models:Date sec="16" usec="94"/>
+			</MyHero_Models:Event.date>
+			<MyHero_Models:Event.loc>
+				<System:Double>321.16</System:Double>
+				<System:Double>701.38</System:Double>
+				<System:Double>830.57</System:Double>
+				<System:Double>458.35</System:Double>
+				<System:Double>108.98</System:Double>
+			</MyHero_Models:Event.loc>
+		</MyHero_Models:Event>
+		<MyHero_Models:Event _id="Ultricies maecenas" address="Sed rhoncus morbi amet" category="Venenatis sem vestibulum tempus praesent" mailman_id="Sit neque adipiscing sodales viverra" nb_plus="61" text="Parturient netus vestibulum" url_photo="http://bactisme.frandroid.com/bemyapp/media/photos/me.png">
+			<MyHero_Models:Event.date>
+				<MyHero_Models:Date sec="24" usec="70"/>
+			</MyHero_Models:Event.date>
+			<MyHero_Models:Event.loc>
+				<System:Double>660.62</System:Double>
+				<System:Double>851.1</System:Double>
+				<System:Double>194.27</System:Double>
+				<System:Double>691.35</System:Double>
+				<System:Double>602.14</System:Double>
+			</MyHero_Models:Event.loc>
+		</MyHero_Models:Event>
+	</MyHero_Models:EventContainer.events>
+</MyHero_Models:EventContainer>

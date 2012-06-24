@@ -17,7 +17,7 @@ namespace MyHero.Services
     {
         public static void GetTopMailman(Action<MailmanContainer> action)
         {
-            FromUri(string.Format("{0}?action=get_mailman_list&sort=total_plus&order=-1&limit=6", App.BASE_URL), action);
+            FromUri(string.Format("{0}?action=get_mailman_list&sort=total_plus&order=-1&limit=5", App.BASE_URL), action);
         }
 
         private static void FromUri<T>(string uri, Action<T> action)

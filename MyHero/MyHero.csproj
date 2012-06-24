@@ -75,13 +75,20 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\Mailman.cs" />
     <Compile Include="Models\UserAddress.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SampleData\EventListSqmple\EventListSqmple.xaml.cs">
+      <DependentUpon>EventListSqmple.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\CommentService.cs" />
     <Compile Include="Services\EventService.cs" />
     <Compile Include="Services\MailmanService.cs" />
     <Compile Include="ViewModels\EventsListViewModel.cs" />
+    <Compile Include="ViewModels\EventViewModel.cs" />
+    <Compile Include="ViewModels\MailmanViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Views\AddressLocationPage.xaml.cs">
       <DependentUpon>AddressLocationPage.xaml</DependentUpon>
@@ -114,13 +121,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <DesignTimeOnly Include="SampleData\EventListSqmple\EventListSqmple.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </DesignTimeOnly>
     <Page Include="Views\AddressLocationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\EventDetailsPage.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\EventsListPage.xaml">
       <SubType>Designer</SubType>
@@ -147,6 +158,7 @@
     <None Include="packages.config" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml" />
+    <DesignTimeOnly Include="SampleData\EventListSqmple\EventListSqmple.xsd" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ApplicationIcon.png">
@@ -156,22 +168,41 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\01.png" />
+    <Content Include="Images\appbar.sync.rest.png" />
+    <Content Include="Images\Badges\batman.png" />
+    <Content Include="Images\Badges\citoyen.png" />
+    <Content Include="Images\Badges\ironman.png" />
+    <Content Include="Images\Badges\joker.png" />
+    <Content Include="Images\Badges\photographe.png" />
+    <Content Include="Images\Badges\popeye.png" />
+    <Content Include="Images\Badges\sauveteur.png" />
     <Content Include="Images\categ1.jpg" />
     <Content Include="Images\Categories\icon-cat-animaux.png" />
     <Content Include="Images\Categories\icon-cat-animal.png" />
     <Content Include="Images\Categories\icon-cat-incident.png" />
     <Content Include="Images\Categories\icon-cat-photos.png" />
     <Content Include="Images\Categories\icon-cat-social.png" />
+    <Content Include="Images\COEUR.png" />
+    <Content Include="Images\Divers\casquette-bleue.png" />
+    <Content Include="Images\Divers\coeur-bleu.png" />
+    <Content Include="Images\Divers\heure-bleu.png" />
     <Content Include="Images\firsttime-address\bt_localiser.png" />
     <Content Include="Images\firsttime-address\bt_monadresse.png" />
     <Content Include="Images\firsttime-address\fond.png" />
     <Content Include="Images\fond.png" />
+    <Content Include="Images\fond_neutre.png" />
+    <Resource Include="Images\ICONE-COEUR.png" />
+    <Resource Include="Images\ICONE-COEUR-BLEU.png" />
     <Content Include="Images\mappushpin.png" />
+    <Content Include="Images\netwo.png" />
     <Content Include="Images\page-menu\bt_animaux.png" />
     <Content Include="Images\page-menu\bt_incident.png" />
     <Content Include="Images\page-menu\bt_photo.png" />
     <Content Include="Images\page-menu\bt_social.png" />
     <Content Include="Images\page-menu\fond.png" />
+    <Content Include="Images\Social\facebook.png" />
+    <Content Include="Images\Social\mail.png" />
+    <Content Include="Images\Social\twitter.png" />
     <Content Include="logoLargeMobile.png" />
     <Content Include="logoSmallMobile.png" />
     <Content Include="SplashScreenImage.jpg" />
@@ -191,6 +222,11 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <DesignData Include="SampleData\EventContainerSampleData.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </DesignData>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />

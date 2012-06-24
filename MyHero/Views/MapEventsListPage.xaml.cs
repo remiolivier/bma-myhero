@@ -65,7 +65,7 @@ namespace MyHero.Views
                     Width = 40,
                     Height = 40,
                     AnchorPoint = MapIconAnchorPoint.Center,
-                    Coordinate = new GeoCoordinate(evt.loc[0], evt.loc[0]),
+                    Coordinate = new GeoCoordinate(evt.loc[0], evt.loc[1]),
                     Source = new Uri("/PanoramaApp1;component/Images/MapObjects.png", UriKind.RelativeOrAbsolute),
                     Content =  GetPushPinTemplate( evt.text + " - " + evt.nb_plus, evt)
                 };

@@ -43,20 +43,22 @@ namespace MyHero.ViewModels
                         ItemsByDate.Add(evt);
                 }
 
+            });
 
 
-                EventService.GetEventsByPopularity(App.CurrentAddress, Category, (a) =>
+
+
+            EventService.GetEventsByPopularity(App.CurrentAddress, Category, (a) =>
+            {
+                ItemsByPopularity.Clear();
+                foreach (var evt in a.events)
                 {
-                    ItemsByPopularity.Clear();
-                    foreach (var evt in a.events)
-                    {
-                        if (evt.url_photo != null && !evt.url_photo.Contains("http"))
-                            evt.url_photo = string.Format("{0}{1}", App.BASE_URL, evt.url_photo);
+                    if (evt.url_photo != null && !evt.url_photo.Contains("http"))
+                        evt.url_photo = string.Format("{0}{1}", App.BASE_URL, evt.url_photo);
 
-                        if (evt.url_photo != null)
-                            ItemsByPopularity.Add(evt);
-                    }
-                });
+                    if (evt.url_photo != null)
+                        ItemsByPopularity.Add(evt);
+                }
             });
         }
 

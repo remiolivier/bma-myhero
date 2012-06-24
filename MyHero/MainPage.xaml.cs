@@ -61,7 +61,7 @@ namespace MyHero
         {
             Image hub = sender as Image;
             if (hub.Tag.ToString() == "incident")
-                NavigationService.Navigate(new Uri("/Views/EventsListPage.xaml?category=incidents", UriKind.Relative));
+                NavigationService.Navigate(new Uri("/Views/EventsListPage.xaml?category=incident", UriKind.Relative));
             else if (hub.Tag.ToString() == "photo")
                 NavigationService.Navigate(new Uri("/Views/ImageEventsListPage.xaml?category=photos", UriKind.Relative));
             else if (hub.Tag.ToString() == "social")
@@ -74,6 +74,11 @@ namespace MyHero
         {
             var listbox = sender as ListBox;
             var selecteditem = listbox.SelectedItem as Mailman;
+
+            if (PhoneApplicationService.Current.State.ContainsKey("OneMailMan"))
+                PhoneApplicationService.Current.State.Remove("OneMailMan");
+
+            PhoneApplicationService.Current.State.Add("OneMailMan", selecteditem);
 
             listbox.SelectionChanged -= FeatListBox_SelectionChanged;
             listbox.SelectedItem = null;

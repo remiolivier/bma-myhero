@@ -124,6 +124,17 @@ namespace MyHero.Views
             catch { }
         }
 
+        protected override void OnNavigatingFrom(System.Windows.Navigation.NavigatingCancelEventArgs e)
+        {
+            base.OnNavigatingFrom(e);
+
+            try
+            {
+                watcher.Stop();
+            }
+            catch { }
+        }
+
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
             _progressIndicator.IsVisible = true;

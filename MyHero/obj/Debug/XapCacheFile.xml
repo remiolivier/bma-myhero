@@ -1,41 +1,58 @@
-﻿<xapCache source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Bin\Debug\MyHero.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="6/24/2012 1:15:32 PM">
+﻿<xapCache source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Bin\Debug\MyHero.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="6/24/2012 6:41:49 PM">
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="6/24/2012 10:51:00 AM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\logoLargeMobile.png" archivePath="logoLargeMobile.png" lastWriteTime="6/24/2012 10:49:10 AM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\logoSmallMobile.png" archivePath="logoSmallMobile.png" lastWriteTime="6/24/2012 10:49:48 AM" />
-  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\obj\Debug\MyHero.dll" archivePath="MyHero.dll" lastWriteTime="6/24/2012 1:15:31 PM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\obj\Debug\MyHero.dll" archivePath="MyHero.dll" lastWriteTime="6/24/2012 6:41:48 PM" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v7.1\Libraries\Microsoft.Expression.Interactions.dll" archivePath="Microsoft.Expression.Interactions.dll" lastWriteTime="8/17/2011 2:48:22 AM" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="9/15/2011 4:36:26 PM" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.Maps.dll" archivePath="Microsoft.Phone.Controls.Maps.dll" lastWriteTime="9/15/2011 4:36:26 PM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\packages\SilverlightToolkitWP.4.2011.12.14\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="6/23/2012 4:48:53 AM" />
-  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero.Helpers\Bin\Debug\MyHero.Helpers.dll" archivePath="MyHero.Helpers.dll" lastWriteTime="6/24/2012 1:12:43 PM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero.Helpers\Bin\Debug\MyHero.Helpers.dll" archivePath="MyHero.Helpers.dll" lastWriteTime="6/24/2012 4:58:29 PM" />
   <file source="C:\Program Files (x86)\NOKIA\Nokia.Maps\Nokia.Maps.dll" archivePath="Nokia.Maps.dll" lastWriteTime="6/6/2012 4:46:56 PM" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v7.1\Libraries\System.Windows.Interactivity.dll" archivePath="System.Windows.Interactivity.dll" lastWriteTime="8/17/2011 2:48:22 AM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero.Helpers\Bin\Debug\Newtonsoft.Json.dll" archivePath="Newtonsoft.Json.dll" lastWriteTime="6/23/2012 7:48:12 AM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="6/23/2012 2:05:42 AM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Background.png" archivePath="Background.png" lastWriteTime="6/23/2012 2:05:42 AM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\01.png" archivePath="Images\01.png" lastWriteTime="6/23/2012 4:52:03 AM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\appbar.sync.rest.png" archivePath="Images\appbar.sync.rest.png" lastWriteTime="6/24/2012 1:34:13 PM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\Badges\batman.png" archivePath="Images\Badges\batman.png" lastWriteTime="6/24/2012 5:42:16 PM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\Badges\citoyen.png" archivePath="Images\Badges\citoyen.png" lastWriteTime="6/24/2012 5:42:16 PM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\Badges\ironman.png" archivePath="Images\Badges\ironman.png" lastWriteTime="6/24/2012 5:42:16 PM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\Badges\joker.png" archivePath="Images\Badges\joker.png" lastWriteTime="6/24/2012 5:42:16 PM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\Badges\photographe.png" archivePath="Images\Badges\photographe.png" lastWriteTime="6/24/2012 5:42:16 PM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\Badges\popeye.png" archivePath="Images\Badges\popeye.png" lastWriteTime="6/24/2012 5:42:16 PM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\Badges\sauveteur.png" archivePath="Images\Badges\sauveteur.png" lastWriteTime="6/24/2012 5:42:16 PM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\categ1.jpg" archivePath="Images\categ1.jpg" lastWriteTime="6/23/2012 4:54:39 AM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\Categories\icon-cat-animaux.png" archivePath="Images\Categories\icon-cat-animaux.png" lastWriteTime="6/24/2012 11:11:47 AM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\Categories\icon-cat-animal.png" archivePath="Images\Categories\icon-cat-animal.png" lastWriteTime="6/24/2012 11:09:54 AM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\Categories\icon-cat-incident.png" archivePath="Images\Categories\icon-cat-incident.png" lastWriteTime="6/24/2012 11:09:54 AM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\Categories\icon-cat-photos.png" archivePath="Images\Categories\icon-cat-photos.png" lastWriteTime="6/24/2012 11:09:54 AM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\Categories\icon-cat-social.png" archivePath="Images\Categories\icon-cat-social.png" lastWriteTime="6/24/2012 11:09:54 AM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\COEUR.png" archivePath="Images\COEUR.png" lastWriteTime="6/24/2012 2:56:22 PM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\Divers\casquette-bleue.png" archivePath="Images\Divers\casquette-bleue.png" lastWriteTime="6/24/2012 2:48:08 PM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\Divers\coeur-bleu.png" archivePath="Images\Divers\coeur-bleu.png" lastWriteTime="6/24/2012 2:25:16 PM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\Divers\heure-bleu.png" archivePath="Images\Divers\heure-bleu.png" lastWriteTime="6/24/2012 2:25:16 PM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\firsttime-address\bt_localiser.png" archivePath="Images\firsttime-address\bt_localiser.png" lastWriteTime="6/23/2012 9:10:26 PM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\firsttime-address\bt_monadresse.png" archivePath="Images\firsttime-address\bt_monadresse.png" lastWriteTime="6/23/2012 9:10:26 PM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\firsttime-address\fond.png" archivePath="Images\firsttime-address\fond.png" lastWriteTime="6/23/2012 9:10:26 PM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\fond.png" archivePath="Images\fond.png" lastWriteTime="6/23/2012 6:11:51 PM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\fond_neutre.png" archivePath="Images\fond_neutre.png" lastWriteTime="6/24/2012 2:35:03 PM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\mappushpin.png" archivePath="Images\mappushpin.png" lastWriteTime="6/24/2012 11:56:22 AM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\netwo.png" archivePath="Images\netwo.png" lastWriteTime="6/24/2012 2:56:22 PM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\page-menu\bt_animaux.png" archivePath="Images\page-menu\bt_animaux.png" lastWriteTime="6/23/2012 5:30:17 PM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\page-menu\bt_incident.png" archivePath="Images\page-menu\bt_incident.png" lastWriteTime="6/23/2012 5:30:17 PM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\page-menu\bt_photo.png" archivePath="Images\page-menu\bt_photo.png" lastWriteTime="6/23/2012 5:30:17 PM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\page-menu\bt_social.png" archivePath="Images\page-menu\bt_social.png" lastWriteTime="6/23/2012 5:30:17 PM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\page-menu\fond.png" archivePath="Images\page-menu\fond.png" lastWriteTime="6/23/2012 6:06:23 PM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\Social\facebook.png" archivePath="Images\Social\facebook.png" lastWriteTime="6/24/2012 2:11:05 PM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\Social\mail.png" archivePath="Images\Social\mail.png" lastWriteTime="6/24/2012 2:11:05 PM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Images\Social\twitter.png" archivePath="Images\Social\twitter.png" lastWriteTime="6/24/2012 2:11:05 PM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="6/23/2012 4:33:39 PM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Toolkit.Content\ApplicationBar.Cancel.png" archivePath="Toolkit.Content\ApplicationBar.Cancel.png" lastWriteTime="6/23/2012 4:48:53 AM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="6/23/2012 4:48:53 AM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Toolkit.Content\ApplicationBar.Delete.png" archivePath="Toolkit.Content\ApplicationBar.Delete.png" lastWriteTime="6/23/2012 4:48:53 AM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Toolkit.Content\ApplicationBar.Select.png" archivePath="Toolkit.Content\ApplicationBar.Select.png" lastWriteTime="6/23/2012 4:48:53 AM" />
-  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="6/24/2012 1:12:44 PM" />
+  <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="6/24/2012 4:47:31 PM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Bin\Debug\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="6/23/2012 2:05:42 AM" />
   <file source="C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero\Bin\Debug\Background.png" archivePath="Background.png" lastWriteTime="6/23/2012 2:05:42 AM" />
 </xapCache>

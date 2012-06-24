@@ -49,7 +49,7 @@
                                Tag="animaux"
                                              />
                     </toolkit:WrapPanel>
-                    <HyperlinkButton Content="paramètres" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+                    <HyperlinkButton Content="paramètres" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="Collapsed" />
                 </StackPanel>
             </controls:PanoramaItem>
 

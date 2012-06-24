@@ -55,12 +55,17 @@ namespace MyHero.Views
         {
             var selectedevent = e.AddedItems[0] as Event;
 
+            if (PhoneApplicationService.Current.State.ContainsKey("OneEvent"))
+                PhoneApplicationService.Current.State.Remove("OneEvent");
+
+            PhoneApplicationService.Current.State.Add("OneEvent", selectedevent);
+
             ListBox listbox = sender as ListBox;
             listbox.SelectionChanged -= ListBox_SelectionChanged;
             listbox.SelectedItem = null;
             listbox.SelectionChanged += ListBox_SelectionChanged;
 
-            NavigationService.Navigate(new Uri("/Views/EventDetailsPage.xaml?eventid=65455757", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/EventDetailsPage.xaml", UriKind.Relative));
         }
 
         private void appbar_MapButton_Click(object sender, EventArgs e)

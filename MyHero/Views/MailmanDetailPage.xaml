@@ -7,6 +7,8 @@
     xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:helper="clr-namespace:MyHero.Helpers;assembly=MyHero.Helpers"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -14,23 +16,49 @@
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
+
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <!--Pivot Control-->
-        <controls:Pivot Title="MY APPLICATION" Foreground="#1795d4">
+        <controls:Pivot Title="MY HERO" Foreground="#1795d4">
             <controls:Pivot.Background>
                 <ImageBrush ImageSource="/Images/fond.png" />
             </controls:Pivot.Background>
             <!--Pivot item one-->
-            <controls:PivotItem Header="item1">
-                <Grid/>
+            <controls:PivotItem Header="Profil">
+                <Grid>
+                    <StackPanel Orientation="Vertical" Margin="0,80,0,0">
+                        <Image Source="{Binding Postier.url_photo}" x:Name="ProfilPhoto" Width="500"/>
+                    </StackPanel>
+                </Grid>
             </controls:PivotItem>
 
             <!--Pivot item two-->
-            <controls:PivotItem Header="item2">
-                <Grid/>
+            <controls:PivotItem Header="Badge">
+                <Grid>
+                    <ListBox x:Name="ListOfBadges" ItemsSource="{Binding ImageBadges}" Height="400">
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <toolkit:WrapPanel Orientation="Horizontal" />
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image x:Name="Illustration" Source="{Binding}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
             </controls:PivotItem>
         </controls:Pivot>
+        <StackPanel Orientation="Horizontal" Background="#1795d4" Width="480" Margin="0,161,0,559">
+            <Image Source="/Images/Divers/casquette-blanc.png" x:Name="Hat" Width="50" Margin="30,0,0,0" />
+            <TextBlock x:Name="Name" Text="{Binding Postier.name}" Foreground="White" FontSize="30" Width="250" />
+            <Image Source="/Images/Divers/coeur-blanc.png" x:Name="Heart" Width="50"/>
+            <TextBlock x:Name="PlusNb" Text="{Binding Postier.total_plus}" FontSize="30" Foreground="White"/>
+        </StackPanel>
     </Grid>
 
     <!--Sample code showing usage of ApplicationBar-->
@@ -44,5 +72,5 @@
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>-->
-    
+
 </phone:PhoneApplicationPage>

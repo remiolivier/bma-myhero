@@ -7,6 +7,7 @@
     xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:helpers="clr-namespace:MyHero.Helpers;assembly=MyHero.Helpers"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -15,38 +16,39 @@
     shell:SystemTray.IsVisible="True">
 
     <phone:PhoneApplicationPage.Resources>
+        <helpers:DateConverter x:Key="DateConverter" />
         <DataTemplate x:Key="EventItemTemplate">
-            <Grid Width="440">
+            <Grid Width="440" Background="#5EFFFFFF" Margin="0,0,0,8">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="2*" />
-                    <RowDefinition Height="2*" />
+                    <RowDefinition />
+                    <RowDefinition Height="25" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="340" />
-                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="70" />
+                    <ColumnDefinition Width="183*"/>
+                    <ColumnDefinition Width="90" />
                 </Grid.ColumnDefinitions>
                 
-                <StackPanel Grid.Row="0" Grid.Column="0" >
-                    <TextBlock Text="{Binding text}" Foreground="#1795d4" />
-                    <TextBlock Text="{Binding date}" Foreground="#1795d4" />
-                </StackPanel>
-                <TextBlock Text="{Binding nb_plus}" Foreground="#1795d4" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" />
-                <Image Source="{Binding url_photo}" Width="70" Height="70"  Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" />
+                <TextBlock Text="{Binding text}" Foreground="#1795d4" Margin="5,0,3,0" d:LayoutOverrides="Height" Grid.Column="1" Grid.RowSpan="2" TextWrapping="Wrap" />
+                <TextBlock Text="{Binding date.sec, Converter={StaticResource DateConverter}}" Foreground="#1795d4" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2" />
+            	<Image Source="{Binding url_photo}" Grid.Column="0" Margin="3" Grid.RowSpan="2" />
+            	<Image Grid.Column="2" Margin="3,0,0,0" Source="/MyHero;component/Images/ICONE-COEUR-BLEU.png" Stretch="UniformToFill" Height="60" HorizontalAlignment="Center" VerticalAlignment="Center" Width="60"/>
+            	<TextBlock Text="{Binding nb_plus}" Foreground="White" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Grid.Column="2" FontSize="16" TextAlignment="Center" />
             </Grid>
         </DataTemplate>
     </phone:PhoneApplicationPage.Resources>
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="Transparent" d:DataContext="{d:DesignData /SampleData/EventContainerSampleData.xaml}">
         <!--Pivot Control-->
         <controls:Pivot Title="MY HERO" Foreground="#1795d4">
             <controls:Pivot.Background>
-                <ImageBrush ImageSource="/Images/fond.png" />
+                <ImageBrush ImageSource="/Images/fond_neutre.png" />
             </controls:Pivot.Background>
             <!--Pivot item one-->
-            <controls:PivotItem Header="par date">
+            <controls:PivotItem Header="par date" d:DataContext="{Binding Source={StaticResource EventListSqmple}}">
                 <ListBox ItemsSource="{Binding ItemsByDate}" ItemTemplate="{StaticResource EventItemTemplate}" SelectionChanged="ListBox_SelectionChanged" />
-            </controls:PivotItem>
+            </controls:PivotItem> <!-- binding ItemsByDate -->
 
             <!--Pivot item two-->
             <controls:PivotItem Header="par popularite">
@@ -58,8 +60,8 @@
     <!--Sample code showing usage of ApplicationBar-->
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton x:Name="appbar_MapButton" IconUri="/Images/appbar_button1.png" Text="carte" Click="appbar_MapButton_Click" />
-            <shell:ApplicationBarIconButton x:Name="appbar_RefreshButton" IconUri="/Images/appbar_button2.png" Text="rafraîchir" Click="appbar_RefreshButton_Click" />
+            <shell:ApplicationBarIconButton x:Name="appbar_MapButton" IconUri="/Images/netwo.png" Text="carte" Click="appbar_MapButton_Click" />
+            <shell:ApplicationBarIconButton x:Name="appbar_RefreshButton" IconUri="/Images/appbar.sync.rest.png" Text="rafraîchir" Click="appbar_RefreshButton_Click" />
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
     

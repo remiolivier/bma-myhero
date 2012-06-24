@@ -6,40 +6,107 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:helper="clr-namespace:MyHero.Helpers;assembly=MyHero.Helpers"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480"
     shell:SystemTray.IsVisible="True">
+    <UserControl.Resources>
+        <helper:DateConverter x:Key="DateToConvert"/>
+    </UserControl.Resources>
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot">
+    	<Grid.Background>
+    		<ImageBrush Stretch="Fill" ImageSource="/Images/fond_neutre.png"/>
+    	</Grid.Background>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="page name" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
-        </StackPanel>
 
+       
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0"></Grid>
+     
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <controls:Pivot Title="MY HERO" x:Name="pivot" Foreground="#1795d4">
+                <controls:PivotItem Header="évènements">
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal" Width="430" HorizontalAlignment="Right" Height="70">
+                            <StackPanel.Background>
+                                <SolidColorBrush Color="Gray" Opacity="0.2" />
+                            </StackPanel.Background>
+
+                            <Image Source="{Binding EventDetail.category}" x:Name="Category" Width="100"/>
+
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="180,0,0,0">
+                                <Image Source="/Images/Divers/coeur-bleu.png" Width="31" x:Name="Heart"/>
+                                <TextBlock x:Name="Like" VerticalAlignment="Center" Text="{Binding EventDetail.nb_plus}" Foreground="#1795d4" TextWrapping="Wrap" FontSize="28" />
+                                <Image x:Name="Time" Source="/Images/Divers/heure-bleu.png" Width="31" Margin="20,0,0,0"/>
+                                <TextBlock x:Name="DateOfEvent" VerticalAlignment="Center" Foreground="#1795d4" Text="{Binding EventDetail.date.sec, Converter={StaticResource DateToConvert}}" TextWrapping="Wrap" FontSize="28" />
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding EventDetail.address}" TextWrapping="Wrap" Width="330" Foreground="#808080" />
+                        </StackPanel>
+                        
+                        <TextBlock x:Name="Description" Text="{Binding EventDetail.text}" TextWrapping="Wrap"/>
+                        <StackPanel>
+                                <StackPanel.Background>
+                                    <SolidColorBrush Color="Gray" Opacity="0.2" />
+                                </StackPanel.Background>
+                                <Image x:Name="ImageOfEvent"  Source="{Binding EventDetail.url_photo}" Width="360" Margin="20"/>
+                            </StackPanel>
+                    </StackPanel>
+                </controls:PivotItem>
+                <controls:PivotItem Header="commentaires">
+                    <StackPanel Orientation="Vertical">
+                        <ListBox  x:Name="AllComs">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Vertical" Background="White" Width="430" HorizontalAlignment="Center">
+                                            <TextBlock Text="{Binding Path=Text}" Foreground="#1795d4" FontSize="26"/>
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                                <TextBlock Text=" par :" Foreground="#1795d4" />
+                                                <TextBlock Text="{Binding Path=Owner_pseudo}" Foreground="#1795d4"/>
+                                            </StackPanel>
+                                    </StackPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        <Button Content="Ajouter un commentaire" x:Name="DivCommentaire" Click="DivCommentaire_Click"/>
+                        
+                    </StackPanel>
+                </controls:PivotItem>
+            </controls:Pivot>
+            <StackPanel Orientation="Vertical" Width="480" Height="800" Background="Black" Visibility="Collapsed" x:Name="FormCom">
+                            <TextBlock Height="40" Width="200" x:Name="txt_Pseudo" Text="Pseudonyme" FontSize="24"/>
+                            <TextBox Height="70" Width="200" x:Name="PseudoForm" Text="{Binding CommentEvent.Owner_pseudo, Mode=TwoWay}"/>
+                            <TextBlock Height="40" Width="400" x:Name="txt_Com" Text="Commentaire" FontSize="24"/>
+                            <TextBox Height="120" Width="400" x:Name="ComTextForm" Text="{Binding CommentEvent.Text, Mode=TwoWay}" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="Event_Id" Text="{Binding CommentEvent.Event_id}"/>
+                            <Button Content="Valider" Width="250" x:Name="AddComs" Click="AddComs_Click"/>
+            </StackPanel>
+        </Grid>
     </Grid>
- 
+
     <!--Sample code showing usage of ApplicationBar-->
-    <!--<phone:PhoneApplicationPage.ApplicationBar>
+    <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
-            <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
-                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
-            </shell:ApplicationBar.MenuItems>
+            <shell:ApplicationBarIconButton IconUri="/Images/Social/facebook.png" Text="Facebook" x:Name="FbLink" Click="FbLink_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/Social/twitter.png" Text="Twitter" x:Name="TweetLink" Click="TweetLink_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/Social/mail.png" Text="Mail" x:Name="MailLink" Click="MailLink_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/COEUR.png" Text="+1" x:Name="LikeBtn" Click="Like_Click" />
+            <!--<shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Facebook"/>
+                <shell:ApplicationBarMenuItem Text="Twitter"/>
+            </shell:ApplicationBar.MenuItems>-->
         </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>-->
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>

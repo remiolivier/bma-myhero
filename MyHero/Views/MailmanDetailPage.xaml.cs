@@ -17,9 +17,11 @@ namespace MyHero.Views
 {
     public partial class MailmanDetailPage : PhoneApplicationPage
     {
+        protected MailmanViewModel model;
         public MailmanDetailPage()
         {
             InitializeComponent();
+            model = new MailmanViewModel();
         }
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
@@ -32,8 +34,8 @@ namespace MyHero.Views
                 NavigationService.GoBack();
                 return;
             }
-
-            //model = PhoneApplicationService.Current.State["Mailman"] as EventsListViewModel;
+            model.Load();
+            this.DataContext = model;
         }
     }
 }

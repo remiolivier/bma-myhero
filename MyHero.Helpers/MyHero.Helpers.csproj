@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColorHelper.cs" />
+    <Compile Include="DateConverter.cs" />
     <Compile Include="IsolatedStorage.cs" />
     <Compile Include="JsonHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
