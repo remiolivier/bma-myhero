@@ -31,19 +31,10 @@ namespace MyHero.ViewModels
                 {
                     evt.url_photo = string.Format("{0}{1}", App.BASE_URL, evt.url_photo);
                     Mailmans.Add(evt);
-                    evt.url_photo = string.Format("{0}{1}", App.BASE_URL, evt.url_photo);
                     Mailmans.Add(evt);
-                    evt.url_photo = string.Format("{0}{1}", App.BASE_URL, evt.url_photo);
                     Mailmans.Add(evt);
-                    evt.url_photo = string.Format("{0}{1}", App.BASE_URL, evt.url_photo);
                     Mailmans.Add(evt);
-                    evt.url_photo = string.Format("{0}{1}", App.BASE_URL, evt.url_photo);
                     Mailmans.Add(evt);
-                    evt.url_photo = string.Format("{0}{1}", App.BASE_URL, evt.url_photo);
-                    Mailmans.Add(evt);
-                    evt.url_photo = string.Format("{0}{1}", App.BASE_URL, evt.url_photo);
-                    Mailmans.Add(evt);
-                    evt.url_photo = string.Format("{0}{1}", App.BASE_URL, evt.url_photo);
                     Mailmans.Add(evt);
                 }
             });

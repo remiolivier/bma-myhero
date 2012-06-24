@@ -24,7 +24,7 @@ namespace MyHero.Models
         public string url_photo { get; set; }
         public List<string> badges { get; set; }
         public string phone_id { get; set; }
-        public List<int> loc { get; set; }
+        public List<double> loc { get; set; }
     }
 
     public class NbPlus

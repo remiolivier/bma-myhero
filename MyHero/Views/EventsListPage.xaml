@@ -26,11 +26,11 @@
                     <ColumnDefinition Width="100" />
                 </Grid.ColumnDefinitions>
                 
-                <StackPanel Grid.Row="0" Grid.Column="0">
-                    <TextBlock Text="{Binding text}" />
-                    <TextBlock Text="{Binding date}" />
+                <StackPanel Grid.Row="0" Grid.Column="0" >
+                    <TextBlock Text="{Binding text}" Foreground="#1795d4" />
+                    <TextBlock Text="{Binding date}" Foreground="#1795d4" />
                 </StackPanel>
-                <TextBlock Text="{Binding nb_plus}"  Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" />
+                <TextBlock Text="{Binding nb_plus}" Foreground="#1795d4" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" />
                 <Image Source="{Binding url_photo}" Width="70" Height="70"  Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" />
             </Grid>
         </DataTemplate>
@@ -39,7 +39,10 @@
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <!--Pivot Control-->
-        <controls:Pivot Title="MY HERO">
+        <controls:Pivot Title="MY HERO" Foreground="#1795d4">
+            <controls:Pivot.Background>
+                <ImageBrush ImageSource="/Images/fond.png" />
+            </controls:Pivot.Background>
             <!--Pivot item one-->
             <controls:PivotItem Header="par date">
                 <ListBox ItemsSource="{Binding ItemsByDate}" ItemTemplate="{StaticResource EventItemTemplate}" SelectionChanged="ListBox_SelectionChanged" />

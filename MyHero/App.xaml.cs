@@ -13,6 +13,7 @@ using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using MyHero.Models;
+using System.IO.IsolatedStorage;
 
 namespace MyHero
 {
@@ -20,7 +21,7 @@ namespace MyHero
     {
         public const string BASE_URL = "http://bactisme.frandroid.com/bemyapp/";
 
-        public List<UserAddress> Addresses = new List<UserAddress>();
+        public static List<UserAddress> Addresses = new List<UserAddress>();
         public static UserAddress CurrentAddress;
 
         /// <summary>
@@ -63,14 +64,14 @@ namespace MyHero
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
 
+            
         }
 
         // Code to execute when the application is launching (eg, from Start)
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
-            if (CurrentAddress == null)
-                CurrentAddress = new UserAddress() { Latitude = 48.8607, Longitude = 2.3504 };
+            
         }
 
         // Code to execute when the application is activated (brought to foreground)

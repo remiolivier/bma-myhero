@@ -1,7 +1,7 @@
 C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero.Helpers\Bin\Debug\MyHero.Helpers.dll
 C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero.Helpers\Bin\Debug\MyHero.Helpers.pdb
+C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero.Helpers\Bin\Debug\Newtonsoft.Json.dll
+C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero.Helpers\Bin\Debug\Newtonsoft.Json.xml
 C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero.Helpers\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero.Helpers\obj\Debug\MyHero.Helpers.dll
 C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero.Helpers\obj\Debug\MyHero.Helpers.pdb
-C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero.Helpers\Bin\Debug\Newtonsoft.Json.dll
-C:\Users\Remix\Documents\GitHub\bma-myhero\MyHero.Helpers\Bin\Debug\Newtonsoft.Json.xml

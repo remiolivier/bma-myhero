@@ -25,6 +25,8 @@
     <SilverlightAppEntry>MyHero.App</SilverlightAppEntry>
     <ValidateXaml>true</ValidateXaml>
     <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.30816.0</ExpressionBlendVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,6 +50,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Expression.Interactions" />
     <Reference Include="Microsoft.Phone" />
     <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Maps, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
@@ -61,6 +64,7 @@
     <Reference Include="system" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Interactivity" />
     <Reference Include="System.Xml" />
     <Reference Include="mscorlib.extensions" />
   </ItemGroup>
@@ -79,6 +83,9 @@
     <Compile Include="Services\MailmanService.cs" />
     <Compile Include="ViewModels\EventsListViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="Views\AddressLocationPage.xaml.cs">
+      <DependentUpon>AddressLocationPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\EventDetailsPage.xaml.cs">
       <DependentUpon>EventDetailsPage.xaml</DependentUpon>
     </Compile>
@@ -88,8 +95,14 @@
     <Compile Include="Views\ImageEventsListPage.xaml.cs">
       <DependentUpon>ImageEventsListPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MailmanDetailPage.xaml.cs">
+      <DependentUpon>MailmanDetailPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MapEventsListPage.xaml.cs">
       <DependentUpon>MapEventsListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RankingMailmanPage.xaml.cs">
+      <DependentUpon>RankingMailmanPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -98,6 +111,10 @@
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
     <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddressLocationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -113,7 +130,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\MailmanDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MapEventsListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RankingMailmanPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -132,6 +157,23 @@
     </Content>
     <Content Include="Images\01.png" />
     <Content Include="Images\categ1.jpg" />
+    <Content Include="Images\Categories\icon-cat-animaux.png" />
+    <Content Include="Images\Categories\icon-cat-animal.png" />
+    <Content Include="Images\Categories\icon-cat-incident.png" />
+    <Content Include="Images\Categories\icon-cat-photos.png" />
+    <Content Include="Images\Categories\icon-cat-social.png" />
+    <Content Include="Images\firsttime-address\bt_localiser.png" />
+    <Content Include="Images\firsttime-address\bt_monadresse.png" />
+    <Content Include="Images\firsttime-address\fond.png" />
+    <Content Include="Images\fond.png" />
+    <Content Include="Images\mappushpin.png" />
+    <Content Include="Images\page-menu\bt_animaux.png" />
+    <Content Include="Images\page-menu\bt_incident.png" />
+    <Content Include="Images\page-menu\bt_photo.png" />
+    <Content Include="Images\page-menu\bt_social.png" />
+    <Content Include="Images\page-menu\fond.png" />
+    <Content Include="logoLargeMobile.png" />
+    <Content Include="logoSmallMobile.png" />
     <Content Include="SplashScreenImage.jpg" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Check.png" />

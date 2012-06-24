@@ -21,24 +21,34 @@ namespace MyHero.Views
     {
         private ProgressIndicator _progressIndicator;
         protected EventsListViewModel model { get; set; }
+        public string Category { get; set; }
 
         public EventsListPage()
         {
             InitializeComponent();
-            this.DataContext = model = new EventsListViewModel();
+            Loaded += new RoutedEventHandler(EventsListPage_Loaded);
+        }
+
+        void EventsListPage_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            _progressIndicator = new ProgressIndicator();
+            _progressIndicator.IsVisible = true;
+            SystemTray.ProgressIndicator = _progressIndicator;
+
+            model = new EventsListViewModel();
+            model.Category = Category;
+            model.Load();
+
+            _progressIndicator.IsVisible = false;
+            this.DataContext = model;
         }
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
 
-            _progressIndicator = new ProgressIndicator();
-            _progressIndicator.IsVisible = true;
-            SystemTray.ProgressIndicator = _progressIndicator;
-
-            model.Load();
-
-            _progressIndicator.IsVisible = false;
+            Category = NavigationContext.QueryString["category"];
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

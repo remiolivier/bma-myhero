@@ -16,6 +16,9 @@ using System.Device.Location;
 using MyHero.ViewModels;
 using System.Collections.ObjectModel;
 using MyHero.Models;
+using System.Windows.Media.Imaging;
+using System.Globalization;
+using MyHero.Helpers;
 
 namespace MyHero.Views
 {
@@ -88,20 +91,42 @@ namespace MyHero.Views
 
         public UIElement GetPushPinTemplate(string text, Event context)
         {
+            StackPanel spRoot = new StackPanel();
+            spRoot.Height = 91;
+
             StackPanel sp = new StackPanel();
-            sp.Background = new SolidColorBrush(Colors.Black);
+            sp.Background = new SolidColorBrush((0xDA1795d4).ToColor());
             sp.Opacity = 0.7;
+            sp.Orientation = System.Windows.Controls.Orientation.Horizontal;
             sp.DataContext = context;
+
+            Image image = new Image();
+            image.Source = new BitmapImage(new Uri("/Images/Categories/icon-cat-" + context.category + ".png", UriKind.Relative));
+            image.Width = 60;
+            image.Margin = new Thickness(5);
 
             TextBlock txt = new TextBlock();
             txt.Foreground = new SolidColorBrush(Colors.White);
             txt.Text = text;
+            txt.TextWrapping = TextWrapping.Wrap;
+            txt.Width = 200;
 
+            sp.Children.Add(image);
             sp.Children.Add(txt);
 
             sp.Tap += new EventHandler<System.Windows.Input.GestureEventArgs>(sp_Tap);
 
-            return sp;
+            Image imagebottom = new Image();
+            imagebottom.Source = new BitmapImage(new Uri("/Images/mappushpin.png", UriKind.Relative));
+            imagebottom.Opacity = 0.7;
+            imagebottom.Width = 20;
+            imagebottom.Height = 20;
+
+            
+            spRoot.Children.Add(sp);
+            spRoot.Children.Add(imagebottom);
+
+            return spRoot;
         }
 
         void sp_Tap(object sender, System.Windows.Input.GestureEventArgs e)

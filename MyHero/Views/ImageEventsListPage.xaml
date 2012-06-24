@@ -17,33 +17,42 @@
 
     <phone:PhoneApplicationPage.Resources>
         <DataTemplate x:Key="ImageEventItemTemplate">
-            <Image Source="{Binding url_photo}" Width="120" CacheMode="BitmapCache" Margin="10" />
+            <StackPanel>
+            <!--<Canvas>-->
+                <Image Source="{Binding url_photo}" Width="440" Canvas.Left="0" Canvas.Top="0" CacheMode="BitmapCache" Margin="10" />
+                <Rectangle Stroke="#ffa800" Fill="#ffa800" Width="440" Opacity="0.7" Height="70" Stretch="Uniform" Canvas.Left="0" Canvas.Top="390" />
+                <TextBlock Text="{Binding text}" FontSize="22" Foreground="White" TextWrapping="Wrap" Height="70"  Canvas.Left="0" Canvas.Top="390" />
+           <!-- </Canvas>-->
+            </StackPanel>
         </DataTemplate>
     </phone:PhoneApplicationPage.Resources>
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <!--Pivot Control-->
-        <controls:Pivot Title="MY HERO" x:Name="pivot">
+        <controls:Pivot Title="PHOTOS" x:Name="pivot" Foreground="#ffa800">
+            <controls:Pivot.Background>
+                <ImageBrush ImageSource="/Images/fond.png" />
+            </controls:Pivot.Background>
             <!--Pivot item one-->
             <controls:PivotItem Header="par date">
-                <ListBox ItemsSource="{Binding ItemsByDate}" ItemTemplate="{StaticResource ImageEventItemTemplate}" SelectionChanged="ListBox_SelectionChanged">
-                    <ListBox.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <toolkit:WrapPanel />
-                        </ItemsPanelTemplate>
-                    </ListBox.ItemsPanel>
+                <ListBox ItemsSource="{Binding ItemsByDate}" SelectionChanged="ListBox_SelectionChanged">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding url_photo}" Width="90" Height="90" Stretch="UniformToFill" Canvas.Left="0" Canvas.Top="0" CacheMode="BitmapCache" Margin="10" />
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
                 </ListBox>
             </controls:PivotItem>
 
             <!--Pivot item two-->
-            <controls:PivotItem Header="par popularite">
-                <ListBox ItemsSource="{Binding ItemsByPopularity}" ItemTemplate="{StaticResource ImageEventItemTemplate}" SelectionChanged="ListBox_SelectionChanged">
-                    <ListBox.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <toolkit:WrapPanel />
-                        </ItemsPanelTemplate>
-                    </ListBox.ItemsPanel>
+            <controls:PivotItem Header="par popularite" Foreground="#ffa800">
+                <ListBox ItemsSource="{Binding ItemsByPopularity}" SelectionChanged="ListBox_SelectionChanged">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding url_photo}" Width="440" Stretch="UniformToFill" Canvas.Left="0" Canvas.Top="0" CacheMode="BitmapCache" Margin="10" />
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
                 </ListBox>
             </controls:PivotItem>
         </controls:Pivot>

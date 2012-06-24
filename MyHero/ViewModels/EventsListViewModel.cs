@@ -18,6 +18,8 @@ namespace MyHero.ViewModels
 {
     public class EventsListViewModel
     {
+        public string Category { get; set; }
+
         public EventsListViewModel()
         {
             ItemsByDate = new ObservableCollection<Event>();
@@ -29,24 +31,32 @@ namespace MyHero.ViewModels
 
         public void Load()
         {
-            EventService.GetEventsByDate(App.CurrentAddress, x =>
+            EventService.GetEventsByDate(App.CurrentAddress, Category, x =>
             {
                 ItemsByDate.Clear();
                 foreach(var evt in x.events)
                 {
-                    evt.url_photo = string.Format("{0}{1}", App.BASE_URL, evt.url_photo);
-                    ItemsByDate.Add(evt);
-                }
-            });
+                    if (evt.url_photo != null && !evt.url_photo.Contains("http"))
+                        evt.url_photo = string.Format("{0}{1}", App.BASE_URL, evt.url_photo);
 
-            EventService.GetEventsByPopularity(App.CurrentAddress, (x) =>
-            {
-                ItemsByPopularity.Clear();
-                foreach (var evt in x.events)
-                {
-                    evt.url_photo = string.Format("{0}{1}", App.BASE_URL, evt.url_photo);
-                    ItemsByPopularity.Add(evt);
+                    if(evt.url_photo != null)
+                        ItemsByDate.Add(evt);
                 }
+
+
+
+                EventService.GetEventsByPopularity(App.CurrentAddress, Category, (a) =>
+                {
+                    ItemsByPopularity.Clear();
+                    foreach (var evt in a.events)
+                    {
+                        if (evt.url_photo != null && !evt.url_photo.Contains("http"))
+                            evt.url_photo = string.Format("{0}{1}", App.BASE_URL, evt.url_photo);
+
+                        if (evt.url_photo != null)
+                            ItemsByPopularity.Add(evt);
+                    }
+                });
             });
         }
 

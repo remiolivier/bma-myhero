@@ -8,67 +8,62 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
-    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="False">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
-        <controls:Panorama Title="MY HERO">
-            <controls:Panorama.TitleTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}" FontSize="100" Margin="0,50,0,0" />
-                </DataTemplate>
-            </controls:Panorama.TitleTemplate>
-            <controls:PanoramaItem Header="">
+        <controls:Panorama Title="">
+            <controls:Panorama.Background>
+                <ImageBrush ImageSource="/Images/page-menu/fond.png" />
+            </controls:Panorama.Background>
+            <controls:PanoramaItem Header=""  Margin="0,180,0,0">
                 <StackPanel>
-                    <toolkit:WrapPanel Height="573">
-                        <toolkit:HubTile Grid.Row="1" Grid.Column="0" 
-                                             Margin="12,12,0,0"
-                                             Source="/Images/categ1.jpg"
-                                             Title="events"
-                                             DisplayNotification="False"
-                                             GroupTag="Categ"
+                    <toolkit:WrapPanel Height="503">
+                        <Image Margin="12,12,0,0"
+                                             Source="/Images/page-menu/bt_social.png"
+                                             Width="180"
                                              Tap="HubTile_Tap"
+                               Tag="social"
                                              />
-                        <toolkit:HubTile Grid.Row="1" Grid.Column="0" 
-                                             Margin="12,12,0,0"
-                                             Source="/Images/categ1.jpg"
-                                             Title="social"
-                                             DisplayNotification="False"
-                                             GroupTag="Categ"
+                        <Image Margin="12,12,0,0"
+                                             Source="/Images/page-menu/bt_photo.png"
+                                             Width="180"
                                              Tap="HubTile_Tap"
+                               Tag="photo"
                                              />
-                        <toolkit:HubTile Grid.Row="1" Grid.Column="0" 
-                                             Margin="12,12,0,0"
-                                             Source="/Images/categ1.jpg"
-                                             Title="photo"
-                                             DisplayNotification="False"
-                                             GroupTag="Categ"
+                        <Image Margin="12,12,0,0"
+                                             Source="/Images/page-menu/bt_incident.png"
+                                             Width="180"
                                              Tap="HubTile_Tap"
+                               Tag="incident"
                                              />
-                        <toolkit:HubTile Grid.Row="1" Grid.Column="0" 
-                                             Margin="12,12,0,0"
-                                             Source="/Images/categ1.jpg"
-                                             Title="animaux"
-                                             DisplayNotification="False"
-                                             GroupTag="Categ"
+                        <Image Margin="12,12,0,0"
+                                             Source="/Images/page-menu/bt_animaux.png"
+                                             Width="180"
                                              Tap="HubTile_Tap"
+                               Tag="animaux"
                                              />
                     </toolkit:WrapPanel>
                     <HyperlinkButton Content="paramètres" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
                 </StackPanel>
             </controls:PanoramaItem>
 
-            <controls:PanoramaItem Header="top postiers" Orientation="Horizontal" Width="460">
-                <ListBox x:Name="FeatListBox" Margin="0,0,-12,0" ItemsSource="{Binding Mailmans}">
+            <controls:PanoramaItem Margin="0,180,0,0" Header="top postiers" Foreground="#1795d4" Orientation="Horizontal" Width="570" HorizontalAlignment="Center">
+                <StackPanel>
+                <ListBox x:Name="FeatListBox" Margin="0,0,12,0" ItemsSource="{Binding Mailmans}" SelectionChanged="FeatListBox_SelectionChanged">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <Image Source="{Binding url_photo}" CacheMode="BitmapCache" Width="150" Height="150"></Image>
-                        </DataTemplate>
+                                <Canvas Width="150" Height="150" Background="Black" Margin="0,0,15,15">
+                                    <Image Source="{Binding url_photo}" Canvas.Left="0" Canvas.Top="0" CacheMode="BitmapCache" Width="150" Height="150"></Image>
+                                    <Rectangle Fill="#1795d4" Opacity="0.7" Height="50"  Width="150" Canvas.Left="0" Canvas.Top="100" />
+                                    <TextBlock Text="{Binding name}" Foreground="White"  Width="150" TextWrapping="Wrap" Canvas.Left="0" Canvas.Top="100" />
+                                </Canvas>
+                            </DataTemplate>
                     </ListBox.ItemTemplate>
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
@@ -76,6 +71,8 @@
                         </ItemsPanelTemplate>
                     </ListBox.ItemsPanel>
                 </ListBox>
+                    <HyperlinkButton Content="Voir le classement" NavigateUri="/Views/RankingMailmanPage.xaml" HorizontalAlignment="Left" />
+                </StackPanel>
             </controls:PanoramaItem>
         </controls:Panorama>
     </Grid>
